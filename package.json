@@ -1,0 +1,12 @@
+{
+  "name": "sequelize_consumer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.4"
+  },
+  "type": "module"
+}
