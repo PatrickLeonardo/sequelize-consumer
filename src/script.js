@@ -55,7 +55,7 @@ await Repos.sync();
 
 const response = await axios.get('https://api.github.com/users/PatrickLeonardo/repos');
 
-const size = Object.keys(response).length - 2;
+const size = Object.keys(response).length - 1;
 const data = response.data;
 for (var c = 0; c < size; c++){
     const rep = await Repos.create({
@@ -65,7 +65,7 @@ for (var c = 0; c < size; c++){
         visibility: data[c].visibility
     });
     let data_list = [rep.repo_id, rep.name, rep.url, rep.visibility];
-    for (var i = 0; i < 4; i++){
+    for (var i = 0; i < size; i++){
         console.log(data_list[i]);
     };
 };
